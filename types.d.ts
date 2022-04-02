@@ -4,8 +4,8 @@ export type StatusUpdate =
   | {
       method: "setTimerange";
       day: number; // 0-6
-      start: number;  // 0-95
-      end: number;  // 0-95
+      start: number;  // 0-671
+      end: number;  // 0-671
       uid: number;  // some unique ID
       owner: string; // window.webxdc.selfAddr
     }
