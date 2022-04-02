@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <script src="webxdc.js"></script>
-	    <script src="model.js"></script>
-	    <script src="controller.js"></script>
-    </head>
-    <body>
-        <script>
-    		window.webxdc.setUpdateListener(receiveUpdate, 0);
-        </script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <script src="webxdc.js"></script>
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      tr {
+        border-bottom: 1px solid grey;
+      }
+      td {
+        border-collapse: collapse;
+        border: 1px solid rgba(128, 128, 128, 0.404);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.webxdc.setUpdateListener(receiveUpdate, 0);
+
+      const rootElement = document.getElementById("root");
+
+      function reRender() {
+        rootElement.innerHTML = "";
+        rootElement.appendChild(tableView());
+      }
+
+      reRender();
+    </script>
+  </body>
 </html>
