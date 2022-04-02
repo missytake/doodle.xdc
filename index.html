@@ -6,29 +6,34 @@
     <script src="model.js"></script>
     <script src="view.js"></script>
     <script src="controller.js"></script>
-    <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      tr {
-        border-bottom: 1px solid grey;
-      }
-      td {
-        border-collapse: collapse;
-        border: 1px solid rgba(128, 128, 128, 0.404);
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="info">
+      <div class="ev-name">
+        <input id="title" type="text" />
+        <a href="" onclick="sendUpdate(); return false;">OK</a>
+        <p id="output"></p>
+      </div>
+      <div class="deadline">
+        <input
+          id="deadline"
+          type="date"
+          name="deadline"
+          placeholder="select Deadline"
+        />
+        <a href="" onclick="sendUpdate(); return false">OK</a>
+        <p id="output"></p>
+      </div>
+    </div>
     <div id="root"></div>
     <script>
       window.webxdc.setUpdateListener(receiveUpdate, 0);
 
-      const rootElement = document.getElementById("root");
+      const rootElement = document.getElementById('root');
 
       function reRender() {
-        rootElement.innerHTML = "";
+        rootElement.innerHTML = '';
         rootElement.appendChild(tableView());
       }
 
