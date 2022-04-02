@@ -7,6 +7,7 @@ export type StatusUpdate =
       end: number;  // 0-671
       uid: number;  // some unique ID
       owner: string; // window.webxdc.selfAddr
+      ownername: string; // window.webxdc.selfName
     }
   | {
       method: "setTitle";
