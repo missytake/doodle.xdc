@@ -4,8 +4,9 @@
 
 ### MVP
 
-- [ ] model.js: receiveUpdate
-- [ ] index.html: setUpdateListener(receiveUpdate)
+- [x] model.js: receiveUpdate
+- [x] index.html: setUpdateListener(receiveUpdate)
+- [x] types.d.js: define types we will use
 - [ ] index.html: title
 - [ ] index.html: deadline
 - [ ] controller.js: setTitle
