@@ -12,7 +12,7 @@
 - [ ] controller.js: setTitle
 - [ ] controller.js: setDeadline
 - [ ] index.html: Week View
-- [ ] controller.js: setTimerange
+- [x] controller.js: setTimerange
 - [ ] view.js: display timerange
 - [ ] controller.js: deleteTimerange
 - [ ] style.css
