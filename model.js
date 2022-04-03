@@ -11,10 +11,21 @@ function receiveUpdate(update) {
     case "setTimerange":
       break;
     case "setTitle":
+      setTitle(update.payload.title, false)
       break;
     case "setDeadline":
       break;
     case "deleteTimerange":
       break;
   }
+}
+
+function getTitle() {
+    const title = localStorage.getItem("title")
+    if (title) {
+        document.getElementById("title").setAttribute("placeholder", title)
+        return title;
+    } else {
+        return "doodle"
+    }
 }

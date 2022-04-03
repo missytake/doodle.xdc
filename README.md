@@ -7,9 +7,9 @@
 - [x] model.js: receiveUpdate
 - [x] index.html: setUpdateListener(receiveUpdate)
 - [x] types.d.js: define types we will use
-- [ ] index.html: title
+- [x] index.html: title
 - [ ] index.html: deadline
-- [ ] controller.js: setTitle
+- [x] controller.js: setTitle
 - [ ] controller.js: setDeadline
 - [ ] index.html: Week View
 - [x] controller.js: setTimerange

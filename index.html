@@ -12,8 +12,7 @@
     <div class="info">
       <div class="ev-name">
         <input id="title" type="text" />
-        <a href="" onclick="sendUpdate(); return false;">OK</a>
-        <p id="output"></p>
+        <a href="" onclick="setTitle(document.getElementById('title').value, true); return false;">OK</a>
       </div>
       <div class="deadline">
         <input
@@ -29,6 +28,7 @@
     <div id="root"></div>
     <script>
       window.webxdc.setUpdateListener(receiveUpdate, 0);
+      document.getElementById("title").setAttribute("placeholder", getTitle())
 
       const rootElement = document.getElementById('root');
 
