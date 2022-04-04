@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { setTitle } from "./controller";
 import { getDefaultState, receiveUpdate, StateType } from "./model";
 
-function TableView() {
+function WeekView() {
   const time_cells = [];
 
   for (let i = 0; i < 24 * 2; i++) {
@@ -13,7 +13,6 @@ function TableView() {
   const rows = time_cells.map((label, index) => {
     return (
       <tr key={label}>
-        <td>{label}</td>
         <td data-day={0} data-time-index={index}></td>
         <td data-day={1} data-time-index={index}></td>
         <td data-day={2} data-time-index={index}></td>
@@ -29,7 +28,6 @@ function TableView() {
     <table>
       <thead>
         <tr>
-          <td>Time</td>
           <td>Mo</td>
           <td>Tu</td>
           <td>We</td>
@@ -99,7 +97,7 @@ export function App() {
           <p id="output"></p>
         </div>
       </div>
-      <TableView />
+      <WeekView />
     </div>
   );
 }

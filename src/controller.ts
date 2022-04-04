@@ -1,3 +1,5 @@
+import { TimeRange } from "./types";
+
 export function setTimerange(start, end) {
   const descr =
     window.webxdc.selfName + " chose timeslot " + start + " until " + end;
@@ -5,11 +7,13 @@ export function setTimerange(start, end) {
     {
       payload: {
         method: "setTimerange",
-        start: start,
-        end: end,
-        owner: window.webxdc.selfAddr,
-        ownername: window.webxdc.selfName,
-        uid: window.webxdc.selfAddr + performance.now,
+        timerange: {
+          start: start,
+          end: end,
+          owner: window.webxdc.selfAddr,
+          ownername: window.webxdc.selfName,
+          uid: window.webxdc.selfAddr + performance.now,
+        }
       },
     },
     descr
