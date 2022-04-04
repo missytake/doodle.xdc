@@ -6,6 +6,7 @@
     "format": "prettier src/* --write",
     "check": "tsc",
     "test": "npm run check && prettier src/* --check",
+    "serve": "npm run build -- --watch",
     "build": "esbuild --bundle src/index.tsx --outfile=bundle.js --sourcemap",
     "build-prod": "esbuild --bundle src/index.tsx --outfile=bundle.js --sourcemap --minify"
   },
