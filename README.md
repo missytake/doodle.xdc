@@ -29,7 +29,16 @@
 - send notification to chat when consensus is approaching (requires core changes)
 - localization of the strings
 
-## Developing
+## Setup Development Environment
+
+* we need npm - if you don't have it yet, get it here: https://github.com/nvm-sh/nvm
+
+```
+git clone https://github.com/missytake/doodle.xdc
+cd doodle.xdc
+```
+
+Run `npm install` to install the javascript dependencies.
 
 ### Build:
 
