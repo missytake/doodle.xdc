@@ -1,4 +1,4 @@
-export function setTimerange(start, end) {
+export function setTimerange(start:number, end:number) {
   const descr =
     window.webxdc.selfName + " chose timeslot " + start + " until " + end;
   window.webxdc.sendUpdate(

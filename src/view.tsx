@@ -47,8 +47,8 @@ function TableView() {
 function Title({ value }: { value: string }) {
   const titleRef = useRef<HTMLInputElement | null>(null);
   const onSaveTitle = () => {
-    if (titleRef.current?.value !== value) {
-      setTitle(titleRef.current?.value);
+    if (titleRef.current && titleRef.current.value !== value) {
+      setTitle(titleRef.current.value);
     }
   };
   return (
