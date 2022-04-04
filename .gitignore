@@ -1,3 +1,9 @@
+# ignore npm dependencies
 node_modules
+
+# ignore build artifacts
 bundle.js
 bundle.js.map
+
+# ignore result
+*.xdc
