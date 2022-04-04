@@ -1,5 +1,7 @@
-import { h, Component, Fragment } from "preact";
+import { h, Component, Fragment, createRef } from "preact";
+import {useEffect, useRef, useState} from "preact/hooks"
 import { setTitle } from "./controller";
+import { getDefaultState, receiveUpdate, StateType } from "./model";
 
 function TableView() {
   const time_cells = [];
@@ -42,22 +44,33 @@ function TableView() {
   );
 }
 
+
+function Title({value}:{value:string}){
+  const titleRef = useRef<HTMLInputElement|null>(null)
+  const onSaveTitle = () => {
+    //setTitle(titleRef.current?.value)
+  }
+  return <div className="title">
+          <input id="title" type="text" ref={titleRef} onBlur={onSaveTitle} value={value} />
+        </div>
+}
+
+
+
 export function App() {
+  const [appState, setAppState] = useState<StateType>(getDefaultState())
+
+  useEffect(()=>{
+    window.webxdc.setUpdateListener((update)=>{
+      receiveUpdate(setAppState, update)
+      //TODO: show loading screen
+    },0);
+  }, [])
+
   return (
     <div>
       <div className="info">
-        <div className="ev-name">
-          <input id="title" type="text" />
-          <a
-            href=""
-            onClick={() => {
-              setTitle(document.getElementById("title").value, true);
-              return false;
-            }}
-          >
-            OK
-          </a>
-        </div>
+        <Title value={appState.title} />
         <div className="deadline">
           <input
             id="deadline"
