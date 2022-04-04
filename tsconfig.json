@@ -6,7 +6,9 @@
     "jsx": "react",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
-    "moduleResolution":"Node"
+    "moduleResolution":"Node",
+    "strict": true,
+    "noImplicitAny": true
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/index.tsx"]
 }
