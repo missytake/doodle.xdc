@@ -16,19 +16,15 @@ export function setTimerange(start, end) {
   );
 }
 
-export function setTitle(title, publish) {
-  localStorage.setItem("title", title);
-  document.getElementById("title").setAttribute("placeholder", title);
-  if (publish) {
-    const descr = window.webxdc.selfName + " set the title to " + title;
-    window.webxdc.sendUpdate(
-      {
-        payload: {
-          method: "setTitle",
-          title: title,
-        },
+export function setTitle(title: string) {
+  const descr = window.webxdc.selfName + " set the title to " + title;
+  window.webxdc.sendUpdate(
+    {
+      payload: {
+        method: "setTitle",
+        title: title,
       },
-      descr
-    );
-  }
+    },
+    descr
+  );
 }

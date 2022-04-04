@@ -1,5 +1,5 @@
 import { h, Component, Fragment, createRef } from "preact";
-import {useEffect, useRef, useState} from "preact/hooks"
+import { useEffect, useRef, useState } from "preact/hooks";
 import { setTitle } from "./controller";
 import { getDefaultState, receiveUpdate, StateType } from "./model";
 
@@ -44,28 +44,43 @@ function TableView() {
   );
 }
 
-
-function Title({value}:{value:string}){
-  const titleRef = useRef<HTMLInputElement|null>(null)
+function Title({ value }: { value: string }) {
+  const titleRef = useRef<HTMLInputElement | null>(null);
   const onSaveTitle = () => {
-    //setTitle(titleRef.current?.value)
-  }
-  return <div className="title">
-          <input id="title" type="text" ref={titleRef} onBlur={onSaveTitle} value={value} />
-        </div>
+    if (titleRef.current?.value !== value) {
+      setTitle(titleRef.current?.value);
+    }
+  };
+  return (
+    <div className="title">
+      <input
+        id="title"
+        type="text"
+        ref={titleRef}
+        onBlur={onSaveTitle}
+        value={value}
+      />
+    </div>
+  );
 }
 
-
-
 export function App() {
-  const [appState, setAppState] = useState<StateType>(getDefaultState())
+  const [appState, setAppState] = useState<StateType>(getDefaultState());
+  // const [isLoading, setLoading] = useState(true);
 
-  useEffect(()=>{
-    window.webxdc.setUpdateListener((update)=>{
-      receiveUpdate(setAppState, update)
-      //TODO: show loading screen
-    },0);
-  }, [])
+  useEffect(() => {
+    window.webxdc.setUpdateListener((update) => {
+      receiveUpdate(setAppState, update);
+
+      // if (update.serial === update.max_serial) {
+      //   setLoading(false);
+      // }
+    }, 0);
+  }, []);
+
+  // if (isLoading && !areThereStateUpdates) {
+  //   return <div>Loading....</div>;
+  // }
 
   return (
     <div>

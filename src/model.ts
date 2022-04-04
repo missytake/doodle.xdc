@@ -18,25 +18,13 @@ export function receiveUpdate(
   update_function: StateUpdater<StateType>,
   update: ReceivedStatusUpdate<StatusUpdate>
 ) {
-  switch (update.payload.method) {
-    case "setTimerange":
-      break;
-    case "setTitle":
-      setTitle(update.payload.title, false);
-      break;
-    case "setDeadline":
-      break;
-    case "deleteTimerange":
-      break;
-  }
-}
-
-function getTitle() {
-  const title = localStorage.getItem("title");
-  if (title) {
-    document.getElementById("title").setAttribute("placeholder", title);
-    return title;
-  } else {
-    return "doodle";
+  if (update.payload.method === "setTimerange") {
+  } else if (update.payload.method === "setTitle") {
+    const title = update.payload.title;
+    update_function((state) => {
+      return { ...state, title };
+    });
+  } else if (update.payload.method === "setDeadline") {
+  } else if (update.payload.method === "deleteTimerange") {
   }
 }
