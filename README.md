@@ -60,3 +60,9 @@ npm run check
 ```
 npm run test
 ```
+
+### Documentations for Reference
+
+- https://deltachat.github.io/webxdc_docs/
+- https://esbuild.github.io/
+- https://preactjs.com/guide/v10/components
