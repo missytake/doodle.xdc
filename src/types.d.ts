@@ -3,7 +3,7 @@ export type StatusUpdate =
       method: "setTimerange";
       start: number; // 0-671
       end: number; // 0-671
-      uid: number; // some unique ID
+      uid: string; // unique ID: email + timestamp
       owner: string; // window.webxdc.selfAddr
       ownername: string; // window.webxdc.selfName
     }
