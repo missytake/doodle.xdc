@@ -1,4 +1,3 @@
-//@ts-check
 import { h, Component, Fragment } from "preact";
 import { setTitle } from "./controller";
 

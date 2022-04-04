@@ -1,14 +1,8 @@
-//@ts-check
-
 import { setTitle } from "./controller";
+import { StatusUpdate } from "./types";
+import { ReceivedStatusUpdate } from "./webxdc";
 
-/** @typedef {import("./types").StatusUpdate} StatusUpdate */
-
-/**
- *
- * @param {import("../webxdc").ReceivedStatusUpdate<StatusUpdate>} update
- */
-function receiveUpdate(update) {
+function receiveUpdate(update: ReceivedStatusUpdate<StatusUpdate>) {
   switch (update.payload.method) {
     case "setTimerange":
       break;

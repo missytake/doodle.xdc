@@ -1,5 +1,3 @@
-//@ts-check
-
 export type StatusUpdate =
   | {
       method: "setTimerange";
