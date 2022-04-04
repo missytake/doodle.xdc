@@ -1,0 +1,31 @@
+{
+  "name": "doodle.xdc",
+  "version": "1.0.0",
+  "description": "## TODO",
+  "scripts": {
+    "format": "prettier src/* --write",
+    "check": "tsc",
+    "test": "npm run check && prettier src/* --check",
+    "serve": "npm run build -- --watch",
+    "build": "esbuild --bundle src/index.tsx --outfile=bundle.js --sourcemap",
+    "build-prod": "esbuild --bundle src/index.tsx --outfile=bundle.js --sourcemap --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missytake/doodle.xdc.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/missytake/doodle.xdc/issues"
+  },
+  "homepage": "https://github.com/missytake/doodle.xdc#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.31",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "preact": "^10.7.0"
+  }
+}

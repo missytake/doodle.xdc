@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "noEmit": true,
+    "target": "es6",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "moduleResolution":"Node"
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "src/index.tsx"]
+}

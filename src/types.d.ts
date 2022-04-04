@@ -3,9 +3,9 @@
 export type StatusUpdate =
   | {
       method: "setTimerange";
-      start: number;  // 0-671
-      end: number;  // 0-671
-      uid: number;  // some unique ID
+      start: number; // 0-671
+      end: number; // 0-671
+      uid: number; // some unique ID
       owner: string; // window.webxdc.selfAddr
       ownername: string; // window.webxdc.selfName
     }
@@ -19,5 +19,5 @@ export type StatusUpdate =
     }
   | {
       method: "deleteTimerange";
-      uid: number;  // the uid of the timerange you want to delete
+      uid: number; // the uid of the timerange you want to delete
     };
