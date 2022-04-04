@@ -33,7 +33,13 @@
 
 * we need npm - if you don't have it yet, get it here: https://github.com/nvm-sh/nvm
 
-Run `npm install` to install the javascript dependencies.
+Clone the repository, switch to it, and run the following to install the
+javascript dependencies:
+
+```
+nvm use 16
+npm install
+```
 
 ### Build:
 
