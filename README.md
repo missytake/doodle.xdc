@@ -4,17 +4,18 @@
 
 ### MVP
 
-- [x] model.js: receiveUpdate
-- [x] index.html: setUpdateListener(receiveUpdate)
+- [x] receiveUpdate
+- [x] setUpdateListener(receiveUpdate)
 - [x] types.d.js: define types we will use
-- [x] index.html: title
-- [ ] index.html: deadline
-- [x] controller.js: setTitle
-- [ ] controller.js: setDeadline
-- [ ] index.html: Week View
-- [x] controller.js: setTimerange
-- [ ] view.js: display timerange
-- [ ] controller.js: deleteTimerange
+- [x] title
+- [ ] deadline
+- [x] setTitle
+- [ ] setDeadline
+- [ ] Week View
+- [x] setTimerange
+- [ ] display timerange
+- [ ] deleteTimerange
+- [ ] "Save" button: sendUpdate()
 - [ ] style.css
 
 ### v2
