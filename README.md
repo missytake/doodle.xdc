@@ -28,6 +28,7 @@
 - block areas OP didn't choose
 - hide settings from non-OP
 - send notification to chat when consensus is approaching (requires core changes)
+  - optional: setting, how many people are required to send a consensus notification
 - localization of the strings
 
 ## Setup Development Environment
