@@ -29,6 +29,7 @@
 - hide settings from non-OP
 - send notification to chat when consensus is approaching (requires core changes)
   - optional: setting, how many people are required to send a consensus notification
+  - optional: send notification + procedure recommendations if there is no timerange where everyone has time
 - localization of the strings
 
 ## Setup Development Environment
